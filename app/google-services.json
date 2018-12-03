@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "23849844903",
+    "firebase_url": "https://foodrestaurant-15b0a.firebaseio.com",
+    "project_id": "foodrestaurant-15b0a",
+    "storage_bucket": "foodrestaurant-15b0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23849844903:android:cbb5e2f3b4947c16",
+        "android_client_info": {
+          "package_name": "com.example.freddy.foodrestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23849844903-a1f6fmbrcfdjvrilt6cgitjsh7o7qc5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.freddy.foodrestaurant",
+            "certificate_hash": "cd52271fe24f85ca7182936db567aaf0a8c6c78d"
+          }
+        },
+        {
+          "client_id": "23849844903-gb6s1cf4eojbeesn2dv5n20u0bf445fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXPKbWDdaUVZ7fqSxpUrr070-vg8O-uE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23849844903-gb6s1cf4eojbeesn2dv5n20u0bf445fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
