@@ -7,104 +7,96 @@
     tools:context=".RegistrarRestauranteActivity">
 
     <EditText
-        android:id="@+id/etnombre"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="NOMBRE"
+        android:hint="Nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etnit"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/nit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="NIT"
+        android:hint="nit"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etnombre" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/etpropietario"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/property"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="PROPIETARIO"
+        android:hint="Propietario"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etnit" />
+        app:layout_constraintTop_toBottomOf="@+id/nit" />
 
     <EditText
-        android:id="@+id/ettelefono"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/telf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="TELEFONO"
+        android:hint="Telefono"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpropietario" />
+        app:layout_constraintTop_toBottomOf="@+id/property" />
 
     <EditText
-        android:id="@+id/etcalle"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="CALLE"
-        android:inputType="textPassword"
+        android:hint="Calle"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ettelefono" />
+        app:layout_constraintTop_toBottomOf="@+id/telf" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="match_parent"
+        android:layout_width="361dp"
         android:layout_height="200dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etcalle" />
+        app:layout_constraintTop_toBottomOf="@+id/street" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="2dp"
-        android:text="SIGUIENTE"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="siguiente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
 </android.support.constraint.ConstraintLayout>
