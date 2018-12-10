@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -73,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
         loadcomponents();
 
-        Name = findViewById(R.id.etName);
+        Name = findViewById(R.id.etNamemenu);
         Password = findViewById(R.id.etPassword);
         Login = findViewById(R.id.btnLogin);
         Register = findViewById(R.id.btnRegister); //button activity thirdActivity
@@ -201,7 +200,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse)  {
-                Toast toast1 = Toast.makeText(getApplicationContext(), "verify your emil or password", Toast.LENGTH_SHORT);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "verifique su email o password", Toast.LENGTH_SHORT);
                 toast1.show();
             }
 

@@ -83,14 +83,14 @@ public class loadingImg extends AppCompatActivity implements View.OnClickListene
 
     private void loadComponents() {
         imageViewImg = this.findViewById(R.id.imageView);
-        btnoption=(Button)this.findViewById(R.id.button);
+        btnoption=(Button)this.findViewById(R.id.capturar);
         btnsend=(Button) this.findViewById(R.id.btnsend);
         btnsend.setOnClickListener(this);
         btnoption.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.button){
+        if(v.getId()==R.id.capturar){
             cargarImagenes();
         }
         if(v.getId()==R.id.btnsend) {

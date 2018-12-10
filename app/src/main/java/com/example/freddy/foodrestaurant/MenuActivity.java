@@ -18,14 +18,12 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-public class RegistrarUsuarioActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
-    private EditText Name;
-    private EditText Email;
-    private EditText Phone;
-    private EditText Ci;
-    private EditText Password;
-    private Button Register;
+    private Button foto;
+    private EditText nombre;
+    private EditText Precio;
+    private EditText descripcion;
 
     private int confir=0;
 
@@ -34,67 +32,58 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar_usuario);
+        setContentView(R.layout.activity_menu);
 
-        Name = findViewById(R.id.etNamemenu);
-        Email = findViewById(R.id.etEmail);
-        Phone = findViewById(R.id.etPhone);
-        Ci = findViewById(R.id.etci);
-        Password = findViewById(R.id.etPassword);
-        Register = findViewById(R.id.btnRegister);
-
-        Register.setOnClickListener(new View.OnClickListener() {
+        nombre = findViewById(R.id.etNamemenu);
+        Precio = findViewById(R.id.etPreciomenu);
+        descripcion = findViewById(R.id.etDescripcionmenu);
+        foto = findViewById(R.id.capturar);
+        foto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendDataRegister(Name.getText().toString(), Email.getText().toString(),  Phone.getText().toString(),
-                        Ci.getText().toString(), Password.getText().toString());
+                sendDataMenu(nombre.getText().toString(), Precio.getText().toString(), descripcion.getText().toString());
 
                 if(confir==1) {
 
 //                    Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
 //                    startActivity(intent);
 
-                    Name.setText("");
-                    Email.setText("");
-                    Phone.setText("");
-                    Ci.setText("");
-                    Password.setText("");
+                    nombre.setText("");
+                    Precio.setText("");
+                    descripcion.setText("");
+
 
                 }
             }
         });
-
-
     }
-
-    private void sendDataRegister(final String name, String Email, String Phone, String Ci, String Password) {
+    private void sendDataMenu(final String name, String precio, String descripcion ) {
 
         //Toast.makeText(getApplicationContext(),name, Toast.LENGTH_SHORT).show();
 
 
-        if(!name.isEmpty()&& !Email.isEmpty()&& !Phone.isEmpty()&& !Ci.isEmpty()&& !Password.isEmpty()) {
+        if(!name.isEmpty()&& !precio.isEmpty()&& !descripcion.isEmpty()) {
 
             confir=1;
 
             RequestParams params = new RequestParams();
             params.put("name", name);
-            params.put("email", Email);
-            params.put("phone", Phone);
-            params.put("ci", Ci);
-            params.put("password", Password);
+            params.put("price", precio);
+            params.put("description", descripcion);
+
 
 
 
             AsyncHttpClient Client = new AsyncHttpClient();
-            Client.post(HOST.getIp()+":4030/api/v1.0/client", params, new JsonHttpResponseHandler() {
+            Client.post(HOST.getIp()+":4030/api/v1.0/menus", params, new JsonHttpResponseHandler() {
 
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     try {
 
-                        Toast.makeText(getApplicationContext(),"Registro realizado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Menu agregado", Toast.LENGTH_SHORT).show();
                         Toast.makeText(getApplicationContext(), response.getString("name"), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegistrarUsuarioActivity.this, MainActivity.class);
+                        Intent intent = new Intent(MenuActivity.this, loadingImg.class);
                         startActivity(intent);
 
 
@@ -105,7 +94,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
 
-                    Toast.makeText(getApplicationContext(),"Usuario ya existente",Toast.LENGTH_SHORT);
+                    Toast.makeText(getApplicationContext(),"Menu ya existe",Toast.LENGTH_SHORT);
                 }
             });
         }
@@ -116,3 +105,4 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         }
     }
 }
+

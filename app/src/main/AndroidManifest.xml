@@ -42,13 +42,14 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".RegistrarUsuarioActivity" />
-        <activity android:name=".loadingImg"></activity>
+        <activity android:name=".loadingImg" />
         <activity android:name=".CheckInformationActivity" />
         <activity android:name=".SplashActivity">
+
+        </activity>
+        <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

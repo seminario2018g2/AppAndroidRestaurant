@@ -11,7 +11,7 @@
         android:layout_width="355dp"
         android:layout_height="289dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/capturar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         android:background="@drawable/camara" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/capturar"
         android:layout_width="334dp"
         android:layout_height="45dp"
         android:layout_marginBottom="96dp"
