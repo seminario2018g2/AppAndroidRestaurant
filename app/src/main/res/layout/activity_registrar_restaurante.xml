@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarRestauranteActivity">
+    tools:context=".RegistrarRestauranteActivity"
+    android:background="@mipmap/fondo">
 
     <EditText
         android:id="@+id/name"
@@ -94,7 +95,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:shadowColor="@color/common_google_signin_btn_text_light_pressed"
+        android:background="@color/colorContent"
+        android:backgroundTint="@color/colorContent"
         android:text="siguiente"
+        android:textAllCaps="?android:attr/windowOverscan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapView" />

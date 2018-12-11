@@ -47,7 +47,7 @@
         <activity android:name=".loadingImg" />
         <activity android:name=".CheckInformationActivity" />
         <activity android:name=".SplashActivity" />
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity" />
         <activity android:name=".ListaRestaurantesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +55,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetalleListResActivity"></activity>
+        <activity android:name=".DetalleListResActivity" />
     </application>
 
 </manifest>
