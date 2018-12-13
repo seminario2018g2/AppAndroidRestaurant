@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.freddy.foodrestaurant">
 
     <!--
@@ -43,12 +44,14 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".RegistrarUsuarioActivity" />
         <activity android:name=".loadingImg" />
         <activity android:name=".CheckInformationActivity" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".ListaRestaurantesActivity">
+        <activity android:name=".ListaRestaurantesActivity"/>
+        <activity android:name=".SeekbarTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,6 +59,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetalleListResActivity" />
+
     </application>
 
 </manifest>
