@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loadingImg">
+    tools:context=".loadingImg"
+    android:background="@mipmap/fondo">
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,7 +28,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Capturar Foto"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorContent"
+        android:backgroundTint="@color/colorContent"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +42,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="CARGAR FOTOS"
+        android:text="FOTOS"
         android:textColor="?attr/actionModeSplitBackground"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -58,7 +60,8 @@
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorContent"
+        android:backgroundTint="@color/colorContent"
         android:text="ENVIAR"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
