@@ -1,5 +1,6 @@
 package com.example.freddy.foodrestaurant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.freddy.foodrestaurant.Host.host;
+import com.example.freddy.foodrestaurant.utils.UserData;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -24,6 +26,7 @@ public class MenuActivity extends AppCompatActivity {
     private EditText nombre;
     private EditText Precio;
     private EditText descripcion;
+    private Context root;
 
     private int confir=0;
 
@@ -34,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        nombre = findViewById(R.id.etNamemenu);
+        nombre = findViewById(R.id.etemail);
         Precio = findViewById(R.id.etPreciomenu);
         descripcion = findViewById(R.id.etDescripcionmenu);
         foto = findViewById(R.id.capturar);
@@ -67,24 +70,27 @@ public class MenuActivity extends AppCompatActivity {
             confir=1;
 
             RequestParams params = new RequestParams();
-            params.put("name", name);
-            params.put("price", precio);
-            params.put("description", descripcion);
+            params.put("nombre", name);
+            params.put("precio", precio);
+            params.put("descripcion", descripcion);
 
 
 
 
             AsyncHttpClient Client = new AsyncHttpClient();
-            Client.post(HOST.getIp()+":4030/api/v1.0/menus", params, new JsonHttpResponseHandler() {
+            Client.post(HOST.getIp()+":4030/api/menus", params, new JsonHttpResponseHandler() {
 
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     try {
 
-                        Toast.makeText(getApplicationContext(),"Menu agregado", Toast.LENGTH_SHORT).show();
-                        Toast.makeText(getApplicationContext(), response.getString("name"), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MenuActivity.this, loadingImg.class);
-                        startActivity(intent);
+                        String msn = response.getString("msn");
+                        String id = response.getString("id");
+                        UserData.ID = id;
+
+                        Intent intent = new Intent(root, loadingImg.class);
+                        root.startActivity(intent);
+                        Toast.makeText(getApplicationContext(), response.getString("estado"), Toast.LENGTH_SHORT).show();
 
 
                     } catch (JSONException e) {

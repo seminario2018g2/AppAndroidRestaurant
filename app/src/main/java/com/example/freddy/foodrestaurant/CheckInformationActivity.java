@@ -48,7 +48,7 @@ public class CheckInformationActivity extends AppCompatActivity implements Googl
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( root, MainActivity.class);
+                Intent intent = new Intent( root, RegistrarRestauranteActivity.class);
                 startActivity(intent);
             }
         });

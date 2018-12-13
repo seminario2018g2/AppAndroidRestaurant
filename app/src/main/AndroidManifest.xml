@@ -23,7 +23,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".RegistrarRestauranteActivity" />
+        <activity android:name=".RegistrarRestauranteActivity">
+
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -44,16 +47,27 @@
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RegistrarUsuarioActivity" />
-        <activity android:name=".loadingImg" />
+        <activity android:name=".loadingImg" >
+
+        </activity>
         <activity android:name=".CheckInformationActivity" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".ListaRestaurantesActivity">
+        <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+
+        </activity>
+        <activity android:name=".MenuActivity">
+
+
+
+        </activity>
+        <activity android:name=".ListaRestaurantesActivity">
+
         </activity>
         <activity android:name=".DetalleListResActivity"></activity>
     </application>

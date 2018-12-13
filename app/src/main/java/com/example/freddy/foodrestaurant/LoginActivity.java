@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
         loadcomponents();
 
-        Name = findViewById(R.id.etNamemenu);
+        Name = findViewById(R.id.etemail);
         Password = findViewById(R.id.etPassword);
         Login = findViewById(R.id.btnLogin);
         Register = findViewById(R.id.btnRegister); //button activity thirdActivity
@@ -145,7 +145,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         } else {
             Toast.makeText(this," Binvenido",Toast.LENGTH_LONG).show();
 
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, RegistrarRestauranteActivity.class);
             startActivity(intent);
         }
     }

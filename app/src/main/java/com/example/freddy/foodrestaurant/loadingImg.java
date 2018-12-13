@@ -110,7 +110,7 @@ public class loadingImg extends AppCompatActivity implements View.OnClickListene
                 params.put("img", file);
                 AsyncHttpClient client = new AsyncHttpClient();
                 //  if (UserData.ID != null) {
-                client.post(HOST.getIp() +":4030/api/v1.0/homeimg", params, new JsonHttpResponseHandler(){
+                client.post(HOST.getIp() +":4030/api/v1.0/restauranteimg", params, new JsonHttpResponseHandler(){
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                         try {

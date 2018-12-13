@@ -36,7 +36,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_usuario);
 
-        Name = findViewById(R.id.etNamemenu);
+        Name = findViewById(R.id.etemail);
         Email = findViewById(R.id.etEmail);
         Phone = findViewById(R.id.etPhone);
         Ci = findViewById(R.id.etci);
@@ -86,7 +86,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
 
 
             AsyncHttpClient Client = new AsyncHttpClient();
-            Client.post(HOST.getIp()+":4030/api/v1.0/client", params, new JsonHttpResponseHandler() {
+            Client.post(HOST.getIp()+":4030/api/v1.0/user", params, new JsonHttpResponseHandler() {
 
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

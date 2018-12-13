@@ -7,7 +7,7 @@
     tools:context=".RegistrarUsuarioActivity">
 
     <EditText
-        android:id="@+id/etNamemenu"
+        android:id="@+id/etemail"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginEnd="8dp"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNamemenu" />
+        app:layout_constraintTop_toBottomOf="@+id/etemail" />
 
     <EditText
         android:id="@+id/etPhone"
